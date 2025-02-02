@@ -1,2 +1,8 @@
 # Sum-of-Absolute-Differences
-Repositorio com duas versões do SAD
+Neste repositorio lidamos com duas versões diferentes do algoritmo Sum of Absolute Differences (SAD): V1 e V3. SAD é uma métrica que calcula a diferença entre duas sequências de dados, sendo muito utilizada em aplicações de processamento de imagem e sinal.
+
+O primeiro circuito, V1, é uma implementação mais simples do SAD. Ele opera de maneira sequencial, lidando com uma única amostra de cada bloco de dados por vez. Apesar de sua estrutura ser mais simples e direta, a V1 tem limitações em termos de velocidade de processamento.
+
+Já o circuito V3 pega a implementação do v1 e a otimiza usando paralelismo através de uma nova organização das memórias MesmA e Mem B, ambas com 32 bits (4*8 bits). Esta configuração de memória permite que leiamos quatro amostras de cada bloco simultaneamente, um nível de paralelismo que aumenta significativamente a velocidade de processamento. Este arranjo de memória habilita a V3 a processar várias amostras ao mesmo tempo, tornando-a uma solução mais eficaz para aplicações que exigem altas velocidades de processamento.
+
+Embora a V3 permita um maior paralelismo, as operações lógicas adicionais resultam em ciclos de relógio maiores em comparação com a implementação original. No entanto, a vantagem do paralelismo da V3 é que ela requer menos ciclos de relógio no total para processar a mesma quantidade de dados. Isso significa que, apesar de cada ciclo ser mais lento individualmente, o tempo total de execução do circuito V3 é significativamente menor, já que o número de ciclos diminuiu muito mais que o aumento individual de cada ciclo de relógio. Na prática, a V3 leva apenas 24,6ns para executar o mesmo processo que a implementação original conclui em 60,84 ns. Portanto, mesmo com ciclos de relógio mais lentos, a V3 consegue oferecer uma performance muito mais rápida devido à eficiência do paralelismo
