@@ -1,0 +1,21 @@
+--------------- dados do fpga ----------------
+familia: Cyclone III
+dispositivo: EP3C5F256C6
+
+-------- dados de utilizacao da placa --------
+total combinational functions: 126 / 5,136 ( 2 % )
+dedicates logic registers: 103 / 5,136 ( 2 % )
+total pins: 92 / 183 ( 50 % )
+
+-------------- dados de atraso ---------------
+Clock to Output Times: SAD[*]
+atraso (ns): 4.654 4.719 
+
+Hold Times: mema == memb
+atraso (ns): 0.522 0.373 
+
+Setup Times: memb
+atraso (ns): -0.144; 0.015
+
+Minimum Clock to Output Times: readb
+atraso (ns): 3.369 3.353
